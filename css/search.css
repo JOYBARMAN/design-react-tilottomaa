@@ -1,0 +1,12 @@
+.input {
+    margin: 1% 1%;
+    background-image: url(https://www.pngarea.com/pngm/109/1164446_searchicon-png-search-icon-png-download.png);
+    background-repeat: no-repeat;
+    outline: 0;
+    background-position: 5px;
+    background-size: 18px;
+  }
+  .form-control{
+    border-radius: 30px !important;
+    width: 100% !important;
+  }

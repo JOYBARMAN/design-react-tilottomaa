@@ -1,0 +1,11 @@
+#form{
+    width: 100%;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px !important;
+    color: black ;
+}
+.button{
+    background-color: rgb(255, 240, 109) !important;
+    border-radius: 10px !important;
+}
