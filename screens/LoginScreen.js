@@ -17,6 +17,9 @@ import { useDispatch, useSelector } from "react-redux";
 /* ACTION CREATORS */
 import { login } from "../actions/userActions";
 
+// Local Css
+import '../css/screens/loginscreen.css';
+
 function LoginScreen({ location, history }) {
   /* STATE */
   const [username, setusername] = useState("");
@@ -50,35 +53,39 @@ function LoginScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1 className="text-center">Sign In</h1>
 
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
 
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="username">
-          <Form.Label>Username</Form.Label>
+        <Form.Group controlId="username" >
+          <Form.Label className="my-2 p-2 text-dark fw-bold">Mobile/Email</Form.Label>
           <Form.Control
             type="username"
-            placeholder="Enter Username"
+            placeholder="Enter Mobile or Email"
             value={username}
             onChange={(e) => setusername(e.target.value)}
+            id="loginform"
           />
         </Form.Group>
 
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="my-2 p-2 text-dark fw-bold">Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter Password"
             value={password}
             onChange={(e) => setpassword(e.target.value)}
+            id="loginform"
           />
         </Form.Group>
 
-        <Button type="submit" variant="primary" className="mt-3">
-          Sign In
-        </Button>
+        <div className="d-grid gap-2">
+          <Button type="submit" className="mt-3 text-white" style={{ backgroundColor: "#ff3300" }}>
+            Log In
+          </Button>
+        </div>
       </Form>
 
       <Row className="py-3">
@@ -87,16 +94,19 @@ function LoginScreen({ location, history }) {
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register
           </Link>
-        </Col>
-      </Row>
-      <Row className="py-3">
-        <Col>
-          Login OTP?{" "}
-          <Link to={redirect ? `/otplogin?redirect=${redirect}` : "/otplogin"}>
-            Otp Login
+          <Link to="#" className="mx-3">
+            Forgot Password
           </Link>
         </Col>
       </Row>
+      <p className='text-center fw-bold h3 my-3'>or</p>
+      <div className="d-grid gap-2">
+        <Button type="submit" className="p-4 shadow" style={{ backgroundColor: "#f2f2f2" }}>
+          <Link to={redirect ? `/otplogin?redirect=${redirect}` : "/otplogin"} className='linkotp h5'>
+            Request OTP
+          </Link>
+        </Button>
+      </div>
     </FormContainer>
   );
 }

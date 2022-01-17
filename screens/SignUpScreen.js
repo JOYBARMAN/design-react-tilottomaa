@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { LinkContainer } from "react-router-bootstrap";
-
 /* REACT ROUTER */
 import { Link } from "react-router-dom";
 
 /* REACT BOOTSTRAP */
-import { Row, Col, Button, Container, Form } from "react-bootstrap";
+import { Row, Col, Button,} from "react-bootstrap";
 
 // Local Css
 import '../css/screens/signupscreen.css'
@@ -22,7 +20,7 @@ export default function SignUpScreen({ location }) {
         <FormContainer>
 
             <div className='text-center'>
-                <h1 className='text-dark fw-bold p-2'>Sign Up Now</h1>
+                <h1 className='text-dark p-2'>Sign Up Now</h1>
                 <p className='fw-bold'>Collect Information,payments and signatures with custom online forms</p>
                 <div className="d-grid gap-2">
                     <Button type="submit" className="my-3 p-4" style={{ backgroundColor: "#004de6" }}>

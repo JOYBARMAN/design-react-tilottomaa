@@ -15,7 +15,6 @@ import { logout } from "../actions/userActions";
 /* COMPONENTS */
 import SearchBox from "./SearchBox";
 
-import logo from "../logo.png";
 
 // local css 
 import "../css/navbar.css"

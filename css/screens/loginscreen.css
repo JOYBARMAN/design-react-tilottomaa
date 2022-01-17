@@ -1,0 +1,17 @@
+/* Css for Login form  */
+
+#loginform{
+    border: none !important;
+    border-bottom: 3px solid rgb(45, 47, 51) !important;
+    border-radius: 0px !important;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    margin-bottom: 10px;
+
+}
+
+/* button */
+.linkotp{
+    text-decoration: none;
+    color: rgb(20, 67, 221) !important;
+}

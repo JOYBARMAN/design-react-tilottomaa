@@ -17,6 +17,9 @@ import { useDispatch, useSelector } from "react-redux";
 /* ACTION CREATORS */
 import { loginotp } from "../actions/userActions";
 
+// Local Css
+import '../css/screens/loginscreen.css';
+
 function LoginOtpScreen({ location, history }) {
     /* STATE */
     const [mobile, setMobile] = useState("");
@@ -50,35 +53,39 @@ function LoginOtpScreen({ location, history }) {
 
     return (
         <FormContainer>
-            <h1>Login OTP</h1>
+            <h1 className="text-center">Login OTP</h1>
 
             {error && <Message variant="danger">{error}</Message>}
             {loading && <Loader />}
 
             <Form onSubmit={submitHandler}>
                 <Form.Group controlId="mobile">
-                    <Form.Label>Mobile</Form.Label>
+                    <Form.Label className="my-2 p-2 text-dark fw-bold">Mobile</Form.Label>
                     <Form.Control
                         type="mobile"
                         placeholder="Enter Mobile"
                         value={mobile}
                         onChange={(e) => setMobile(e.target.value)}
+                        id="loginform"
                     />
                 </Form.Group>
 
                 <Form.Group controlId="otp">
-                    <Form.Label>OTP</Form.Label>
+                    <Form.Label className="my-2 p-2 text-dark fw-bold">OTP</Form.Label>
                     <Form.Control
                         type="otp"
                         placeholder="Enter OTP"
                         value={otp}
                         onChange={(e) => setOtp(e.target.value)}
+                        id="loginform"
                     />
                 </Form.Group>
 
-                <Button type="submit" variant="primary" className="mt-3">
-                    Login OTP
-                </Button>
+                <div className="d-grid gap-2">
+                    <Button type="submit" className="mt-3 text-white" style={{ backgroundColor: "#cc33ff" }}>
+                        Login OTP
+                    </Button>
+                </div>
             </Form>
 
             <Row className="py-3">

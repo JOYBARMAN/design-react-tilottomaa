@@ -65,7 +65,7 @@ function RegisterScreen({ location, history }) {
 
   return (
     <FormContainer>
-      <h1>CREATE account</h1>
+      <h1 className="text-center">Create Account</h1>
 
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
